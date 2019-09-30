@@ -100,8 +100,8 @@ python src/mm_test.py ./experiments/faster_rcnn_r50_fpn.py work_dirs/reppoints_m
 
 ### Center Net
 <div align="center">
-    <img src="https://github.com/ywzcode/AML-Project/blob/master/figures/results_vis/CenterNet/273275%2C36f4100045f938ec.jpg" height="300px">
-    <img src="https://github.com/ywzcode/AML-Project/blob/master/figures/results_vis/CenterNet/273278%2Caafda000c492d738.jpg" height="300px">
+    <img src="https://github.com/ywzcode/AML-Project/blob/master/figures/results_vis/CenterNet/273275%2C36f4100045f938ec.jpg" height="200px">
+    <img src="https://github.com/ywzcode/AML-Project/blob/master/figures/results_vis/CenterNet/273278%2Caafda000c492d738.jpg" height="200px">
 </div>
 
 
