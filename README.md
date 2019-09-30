@@ -1,6 +1,6 @@
 # AML Project: Object Detection In Crowded Scenes
 
-In this project, we modify 3 representative state-of-art detectors and train them on CrowdHuman dataset. Faster R-CNN with FPN, RepPoints and Object as Points are investigated. They represent three typical new ideas in general object detection problem respectively: classical anchor-based two-stage detector with feature pyramid, deformable-based anchor free two-stage detector and anchor free one-stage detector
+In this project, we modify 3 representative state-of-art detectors and train them on CrowdHuman dataset. Faster R-CNN with FPN, RepPoints and Object as Points are investigated. They represent three typical new ideas in general object detection problem respectively: classical anchor-based two-stage detector with feature pyramid, deformable-based anchor free two-stage detector and anchor free one-stage detection. Our Faster R-CNN with FPN and RepPoints are implemented based on MMdet. 
 
 ## Installation
 
@@ -56,6 +56,7 @@ After install Anaconda:
 
 ```
 python setup.py develop
+ 
 ```
 
 ## Dataset preparation
@@ -78,12 +79,22 @@ python setup.py develop
                 |-- ...
     ```
 
-## Training
+## Analysis
+Analysis and download the dataset, use the file under the `src\tools\crowd`, where you can find our codes for visualization anlysis, upper bound analysis, data statistics analysis, image saliency analysis.....
+
+## Training    
 
 ### training Center Net
 Use the `./experiments/train_crowd.sh`for training and testing and saliency analysis.
 
-Analysis and download the dataset, use the file under the `src\tools\crowd`.
+### training on mmdet for Faster R-CNN-FPN and RepPoints
+training setting example:    
+
+CUDA_VISIBLE_DEVICES=1,2 python src/mm_train.py ./experiments/faster_rcnn_r50_fpn.py
+
+testing      
+
+python src/mm_test.py ./experiments/faster_rcnn_r50_fpn.py work_dirs/reppoints_moment_r50_fpn_2x/latest.pth --json_out ./results/reppoints_1333_800.json
 
 
 ## Reference
