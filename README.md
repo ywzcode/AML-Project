@@ -82,15 +82,18 @@ python setup.py develop
 ## Analysis
 Analysis and download the dataset, use the file under the `src\tools\crowd`, where you can find our codes for visualization anlysis, upper bound analysis, data statistics analysis, image saliency analysis.....
 
-## Training
+## Training    
 
 ### training Center Net
 Use the `./experiments/train_crowd.sh`for training and testing and saliency analysis.
 
 ### training on mmdet for Faster R-CNN-FPN and RepPoints
-training setting example:
+training setting example:    
+
 CUDA_VISIBLE_DEVICES=1,2 python src/mm_train.py ./experiments/faster_rcnn_r50_fpn.py
-testing 
+
+testing      
+
 python src/mm_test.py ./experiments/faster_rcnn_r50_fpn.py work_dirs/reppoints_moment_r50_fpn_2x/latest.pth --json_out ./results/reppoints_1333_800.json
 
 
