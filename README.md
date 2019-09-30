@@ -1,6 +1,6 @@
 # AML Project: Object Detection In Crowded Scenes
 
-In this project, we modify 3 representative state-of-art detectors and train them on CrowdHuman dataset. Faster R-CNN with FPN, RepPoints and Object as Points are investigated. They represent three typical new ideas in general object detection problem respectively: classical anchor-based two-stage detector with feature pyramid, deformable-based anchor free two-stage detector and anchor free one-stage detection. Our Faster R-CNN with FPN and RepPoints are implemented based on MMdet. 
+In this project, we modify 3 representative state-of-art detectors and train them on CrowdHuman dataset. Faster R-CNN with FPN, RepPoints and Object as Points are investigated. They represent three typical new ideas in general object detection problem respectively: classical anchor-based two-stage detector with feature pyramid, deformable-based anchor free two-stage detector and anchor free one-stage detection. Our Faster R-CNN with FPN and RepPoints are implemented based on MMdetection (as shown in reference). 
 
 ## Installation
 
@@ -95,6 +95,16 @@ CUDA_VISIBLE_DEVICES=1,2 python src/mm_train.py ./experiments/faster_rcnn_r50_fp
 testing      
 
 python src/mm_test.py ./experiments/faster_rcnn_r50_fpn.py work_dirs/reppoints_moment_r50_fpn_2x/latest.pth --json_out ./results/reppoints_1333_800.json
+
+## Results samples
+
+### Center Net
+<figure class="third">
+    <img src="https://github.com/ywzcode/AML-Project/blob/master/figures/results_vis/CenterNet/273275%2C36f4100045f938ec.jpg">
+    <img src="https://github.com/ywzcode/AML-Project/blob/master/figures/results_vis/CenterNet/273278%2Caafda000c492d738.jpg">
+        <img src="https://github.com/ywzcode/AML-Project/blob/master/figures/results_vis/CenterNet/282555%2C694040009c16d98d.jpg">
+</figure>
+
 
 
 ## Reference
